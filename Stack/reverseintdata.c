@@ -1,53 +1,59 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
 
 #define Size 10
 int array[10];
 int stack[Size], top = -1;
 
-void push(int a){
+void push(int a)
+{
     stack[++top] = a;
 }
 
-int pop(){
+int pop()
+{
     return stack[top--];
 }
 
-void reverse(){
+void reverse()
+{
 
     int i = 0, length = 0;
 
-    while(array[i++] != '\0'){
+    while (array[i++] != '\0')
+    {
         length++;
     }
-    for(i = 0; i < length; i++){
+    for (i = 0; i < length; i++)
+    {
         push(array[i]);
-        printf("%d",array[i]);
+        printf("%d", array[i]);
     }
     printf("\n");
 }
 
-void display(){
+void display()
+{
 
     int i = top;
-    while(i != -1){
-        printf("%d ",stack[i]);
+    while (i != -1)
+    {
+        printf("%d ", stack[i]);
         i--;
     }
-
 }
 
-int main(){
+int main()
+{
 
     int i = 0, j;
     printf("Enter size of array: ");
     scanf("%d", &j);
     printf("Enter elements: ");
-    while(j){
-        scanf("%d", &array[i++]);
-        j--;
+    for (i = 0; i < j; i++)
+    {
+        scanf("%d", &array[i]);
     }
-    
+
     reverse();
     display();
 

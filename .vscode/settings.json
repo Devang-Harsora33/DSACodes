@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "INFIX_POSTFIX_EXPRESSION.C": "cpp",
+        "LINKED_LIST.C": "cpp",
+        "PRAC.C": "cpp",
+        "BST2.C": "cpp"
+    }
+}
