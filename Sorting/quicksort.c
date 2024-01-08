@@ -8,12 +8,12 @@ void swap(int *a, int *b)
     *b = temp;
 }
 
-int partition(int arr[], int low, int high)
+int partition(int arr[], int left, int right)
 {
-    int pivot = arr[high];
-    int i = (low - 1);
+    int pivot = arr[right];
+    int i = (left - 1);
 
-    for (int j = low; j <= high - 1; j++)
+    for (int j = left; j <= right - 1; j++)
     {
         if (arr[j] < pivot)
         {
@@ -22,18 +22,18 @@ int partition(int arr[], int low, int high)
         }
     }
 
-    swap(&arr[i + 1], &arr[high]);
+    swap(&arr[i + 1], &arr[right]);
     return (i + 1);
 }
 
-void quickSort(int arr[], int low, int high)
+void quickSort(int arr[], int left, int right)
 {
-    if (low < high)
+    if (left < right)
     {
-        int pi = partition(arr, low, high);
+        int pi = partition(arr, left, right);
 
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+        quickSort(arr, left, pi - 1);
+        quickSort(arr, pi + 1, right);
     }
 }
 
